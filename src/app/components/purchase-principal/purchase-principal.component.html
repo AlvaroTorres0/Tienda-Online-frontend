@@ -1,0 +1,8 @@
+<app-navbar></app-navbar>
+<div class="container-purchase" *ngIf="dataRecibed">
+    <div class="container-purchase-components">
+        <app-purchase-images class="purchase images" [images]="images"></app-purchase-images>
+        <app-purchase-data-product class="purchase data" [data]="dataProduct"></app-purchase-data-product>
+        <app-purchase-payment class="purchase payment" [data]="dataProduct"></app-purchase-payment>
+    </div>
+</div>

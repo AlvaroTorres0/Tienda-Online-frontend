@@ -1,0 +1,25 @@
+<div class="container-principal-purchases">
+    <div class="purchases" *ngIf="frameSales">
+        <h2 class="title-userPurchases">Tus ventas</h2>
+        <div class="purchase-item" *ngFor="let product of userSales; let i = index">
+            <div class="container_date">
+                <span>{{product.categoria}}</span>
+            </div>
+
+            <div class="container_info-purchase">
+                <div class="info-purchase_image">
+                    <img src="{{product.imagenes[0].img}}" alt="">
+                </div>
+
+                <div class="info-purchase_info">
+                    <h3>{{product.nombre}}</h3>
+                    <span>Unidades disponibles: {{product.stock}}</span>
+                </div>
+
+                <div class="info-purchase_pay">
+                    <span>Precio por unidad <strong>$ {{product.precio}}</strong></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

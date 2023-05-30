@@ -1,0 +1,149 @@
+.principal-container {
+    height: 80vh;
+    width: 80vw;
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+form {
+    display: flex;
+    gap: 30px;
+}
+
+.container-data-login {
+    width: 40%;
+    height: 100%;
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 30%;
+}
+
+.container-data-login>img {
+    height: 80px;
+    width: 80px;
+    border-radius: 20%;
+    margin: 20px auto;
+    display: block;
+
+}
+
+.container-data-login>form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-item {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.login-item>input {
+    border: none;
+    height: 30px;
+    width: 100%;
+    font-size: 18px;
+    border-bottom: 2px solid #000;
+}
+
+.login-item>span {
+    font-size: 18px;
+    opacity: .5;
+}
+
+.login-item>input:focus {
+    outline: none;
+}
+
+.login-item>button {
+    background: #4164e4;
+    color: #fff;
+    border: none;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+    gap: 50px;
+}
+.remember-me{
+    display: flex;
+    gap: 5px;
+}
+
+.create-accout {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.create-accout>span>a {
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.container-login-aside {
+    width: 60%;
+    height: 100%;
+    background: #4164e4;
+    border-top-right-radius: 30%;
+    border-bottom-right-radius: 10px;
+}
+
+.aside_content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.aside_content img {
+    height: 500px;
+    width: 500px;
+
+}
+
+.aside_phrases {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.phrases:first-child {
+    font-size: 30px;
+}
+
+.phrases:last-child {
+    font-size: 20px;
+}
+
+@media screen and (max-width: 1180px) {
+    .container-login-aside {
+        display: none;
+    }
+
+    .container-data-login {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 100%;
+    }
+}

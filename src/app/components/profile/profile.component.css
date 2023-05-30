@@ -1,0 +1,51 @@
+.profile-menu{
+    width: 200px;
+    background: #fff;
+    margin-top: 6vh;
+}
+
+.container-principal-profile{
+    display: flex;
+}
+
+.menu-options{
+    padding: 40px 25px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.option span{
+    font-size:18px;
+}
+.option{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.accesible:hover{
+    color: #3333e4;
+    cursor: pointer;
+}
+
+.accesible i{
+    position: relative;
+}
+.accesible span{
+    position: relative;
+}
+
+/* .accesible span::before{
+    content: "";
+    height: 2px;
+    bottom: 0;
+    width: 120px;
+    background: #000;
+    position: absolute;
+} */
+
+.options_menu{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

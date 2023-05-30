@@ -1,0 +1,35 @@
+<div class="container-nav">
+    <div class="container_logo">
+        <img src="../../../assets/logo.png" alt="Logo Tienda" (click)="redirectToHome()">
+        <span id="name-shop" (click)="redirectToHome()">Shoppitc</span>
+    </div>
+
+    <div class="container_searchbar">
+        <i class="fa-solid fa-magnifying-glass" style="color: #000;"></i>
+        <input type="text" placeholder="Buscar" id="search-bar">
+    </div>
+
+
+    <div class="container_cartanduser">
+        <div *ngIf="buttonCarShop" class="cart_shop" (click)="redirectToCartShop()">
+            <div class="cart_number">
+                <span>1</span>
+            </div>
+            <i class="bi bi-cart-dash" style="color: #fff;"></i>
+        </div>
+        
+        <button class="buttonProfile" *ngIf="buttonMenuProfile" (click)="showMenuProfile()"><img src="{{dataUserLoged.image}}" alt="Image user"></button>
+        <button id="sign-in" *ngIf="buttonSignIn" (click)="redirectToLogin()">Iniciar sesión</button>
+
+        <div class="menu" *ngIf="menuProfile">
+            <div class="transparent"></div>
+            <div class="menu-items">
+                <button class="menu-item" (click)="redirectToProfile()">Ver Perfil</button>
+                <button class="menu-item" (click)="redirectToSale()">Vender</button>
+                <button class="menu-item" (click)="signOff()">Salir</button>
+
+            </div>
+        </div>
+
+    </div>
+</div>

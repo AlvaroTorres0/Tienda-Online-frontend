@@ -1,0 +1,237 @@
+.nav {
+    position: relative;
+}
+
+/** Formulario Usuario */
+.container-data-user {
+    background: #fff;
+    height: 75vh;
+    width: 40%;
+    border-radius: 10px;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.container-principal {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 6vh);
+    width: 100%;
+}
+
+.title-newuser {
+    font-size: 30px;
+    margin: 20px 25px;
+}
+
+.icon {
+    position: absolute;
+    right: 0;
+    margin: 5px;
+}
+
+.icon>img {
+    height: 90px;
+    width: 90px;
+}
+
+
+.form-data {
+    height: 90%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.form-data-item {
+    width: 60%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#userImage{
+    height: 100px;
+    width: 100px;
+    padding: 15px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.form-data-item>input {
+    height: 50%;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #3333e4;
+    font-size: 20px;
+    transition-property: border-bottom;
+    transition-duration: .3s;
+}
+
+.form-data-item>input:focus {
+    outline: none;
+    border-bottom: 2px solid #00b347;
+}
+
+.form-data-item>span {
+    font-size: 15px;
+    font-weight: 500;
+    opacity: .5;
+}
+.dragdrop-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+#inspect{
+    width: 100px;
+}
+.dragdrop{
+    width: 100%;
+}
+
+.button>button {
+    background: #4164e4;
+    color: #fff;
+    border: none;
+    height: 40px;
+    width: 200px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition-property: background;
+    transition-duration: .2s;
+}
+
+.button>button:hover {
+    background: #00b347;
+}
+
+@media screen and (max-width: 1580px) {
+    .form-data-item {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .container-data-user {
+        width: 90%;
+    }
+}
+
+@media screen and (max-height: 800px) {
+    .container-data-user {
+        width: 90%;
+        height: 70%;
+    }
+}
+
+
+/** Formulario Domicilio */
+.container-address-user {
+    background: #fff;
+    width: 40%;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.form-data-address {
+    width: 90%;
+    height: 90%;
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.form-data-item_address {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-data-item_address>input {
+    width: 50%;
+    height: 40px;
+}
+
+.form-data-item_address>input:focus {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #00b347;
+}
+
+.form-data-item_address--double {
+    display: flex;
+}
+
+.data-item {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.data-item>input {
+    height: 40px;
+    width: 90%;
+}
+
+.data-item>input:focus {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #00b347;
+}
+
+.street {
+    display: flex;
+    flex-direction: column;
+}
+
+.items-street {
+    display: flex;
+}
+
+.span {
+    font-size: 15px;
+    font-weight: 500;
+    opacity: .5;
+}
+
+.button-address {
+    display: flex;
+    justify-content: center;
+}
+
+.message {
+    opacity: 1;
+}
+
+#descripcion {
+    resize: none;
+}

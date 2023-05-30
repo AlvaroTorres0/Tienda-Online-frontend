@@ -1,0 +1,25 @@
+<div class="container-offers">
+    <h2 class="title">Ofertas increíbles para ti</h2>
+    <div class="offers">
+        <div class="offer-card" *ngFor="let product of products; let i = index" (click)="redirectToPurchase(product._id)">
+            <div class="card-img">
+                <img src="{{product.imagenes[0].img}}" alt="">
+            </div>
+            <div class="card-data">
+                <div class="price">
+                    <span id="price_product">$ {{product.precio}}</span>
+                    <span id="disccount">29% OFF</span>
+                </div>
+                <div class="additional-info">
+                    <span id="msi">12x $504</span>
+                    <span id="envio">Envío gratis</span>
+                </div>
+                <div class="product-info">
+                    <p>
+                        {{product.descripcion}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

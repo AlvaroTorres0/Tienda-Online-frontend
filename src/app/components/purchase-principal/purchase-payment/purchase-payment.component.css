@@ -1,0 +1,114 @@
+.container-payment {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border: 1px solid #0002;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    padding: 20px;
+    justify-content: center;
+}
+
+/*? Payment info styles */
+.payment-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.green {
+    color: rgba(30, 158, 98, 0.753);
+    font-weight: 500;
+}
+
+.fa-truck {
+    margin-right: 10px;
+}
+
+/*? Producto vendor styles */
+.product-vendor>span {
+    font-weight: 500;
+}
+
+/*? Stock styles */
+.stock {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.stock>span.title {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.unitys {
+    display: flex;
+    gap: 10px;
+}
+
+.unitys>input {
+    width: 20%;
+}
+
+.unitys>span#availables {
+    font-weight: 500;
+}
+
+
+
+
+/*? Info shop styles*/
+.info-shopp {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+.item {
+    display: flex;
+    gap: 10px;
+}
+
+.item i {
+    display: flex;
+    align-items: center;
+    height: 50%;
+}
+
+.info-principal {
+    color: #4164e4;
+    font-weight: 500;
+}
+
+/*? Buttons styles */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.buttons>button {
+    height: 45px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.buttons>button.shopp {
+    background: #4164e4;
+    color: #fff;
+}
+
+.buttons>button.cart {
+    background: #4164e422;
+    color: #4164e4;
+}

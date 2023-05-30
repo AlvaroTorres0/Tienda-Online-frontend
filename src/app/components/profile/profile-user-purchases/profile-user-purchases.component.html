@@ -1,0 +1,26 @@
+<div class="container-principal-purchases">
+    <div class="purchases" *ngIf="framePurchase">
+        <h2 class="title-userPurchases">Tus compras</h2>
+        <div class="purchase-item" *ngFor="let product of purchases; let i = index">
+            <div class="container_date">
+                <span>{{product.fecha}}</span>
+            </div>
+
+            <div class="container_info-purchase">
+                <div class="info-purchase_image">
+                    <img src="{{product.infoCompra.img}}" alt="">
+                </div>
+
+                <div class="info-purchase_info">
+                    <h3>{{product.infoCompra.nombre}}</h3>
+                    <span>Unidades adquiridas: {{product.infoCompra.pieces}}</span>
+                </div>
+
+                <div class="info-purchase_pay">
+                    <span>Precio por unidad <strong>$ {{product.infoCompra.precio}}</strong></span>
+                    <span>Pago total: <strong>$ {{product.infoCompra.pieces * product.infoCompra.precio}}</strong></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

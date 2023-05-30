@@ -1,0 +1,73 @@
+.container-vogue {
+    width: 80%;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.title>h2 {
+    font-size: 28px;
+    font-weight: 350;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    width: 60%;
+    background: rgb(217, 66, 66);
+    background: linear-gradient(90deg, rgba(217, 66, 66, 1) 0%, rgba(223, 172, 172, 1) 38%, rgba(224, 184, 129, 1) 63%, rgba(255, 149, 0, 1) 100%);
+}
+
+.publicity {
+    display: flex;
+    margin-top: 10px;
+    padding: 0 40px;
+}
+
+.logo>img {
+    height: 40px;
+    width: 200px;
+}
+
+.products>img {
+    height: 250px;
+    width: 300px;
+    padding: 20px;
+}
+
+.info {
+    background: #000;
+    width: 40%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info>.phrase1 {
+    font-size: 13px;
+    font-weight: 600;
+    margin-left: 100px;
+}
+
+.info>.phrase2 {
+    font-size: 30px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+}
+
+.info>.more {
+    font-size: 18px;
+    font-weight: 300;
+    margin-left: 100px;
+}

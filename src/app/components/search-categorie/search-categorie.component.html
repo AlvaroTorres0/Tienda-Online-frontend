@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+<div class="container-offers">
+    <h2 class="title">Mejores resultados para {{categorie}}</h2>
+    <div class="offers">
+        <div class="offer-card" *ngFor="let product of products; let i = index" (click)="redirectToPurchase(product._id)">
+            <div class="card-img">
+                <img src="{{product.imagenes[0].img}}" alt="">
+            </div>
+
+            <div class="dataproduct">
+                <div class="product-info">
+                    <span id="product-name">{{product.nombre}}</span>
+                    <span id="vendor">Vendido por {{vendors[i]}}</span>
+                </div>
+    
+                <div class="card-data">
+                    <div class="price">
+                        <span id="price_product">$ {{product.precio}}</span>
+                        <span id="disccount">29% OFF</span>
+                    </div>
+                    <div class="additional-info">
+                        <span id="msi">12x $504</span>
+                        <span id="envio">Envío gratis</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>

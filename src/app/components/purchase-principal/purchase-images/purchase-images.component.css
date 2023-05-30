@@ -1,0 +1,50 @@
+.container-images {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.image {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.image>img {
+    display: none;
+    width: 80%;
+    height: 60%;
+    object-fit: contain;
+
+}
+
+.image>img.image-active {
+    display: block;
+}
+
+.btn-carousel {
+    position: absolute;
+}
+
+.btn-carousel>i {
+    color: #000;
+    opacity: .5;
+    font-size: 40px;
+}
+
+.btn-carousel>i:hover {
+    opacity: 1;
+}
+
+.btn-prev {
+    left: 1%;
+    top: 50%;
+}
+
+.btn-next {
+    right: 1%;
+    top: 50%;
+}

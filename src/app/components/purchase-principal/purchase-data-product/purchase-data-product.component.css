@@ -1,0 +1,28 @@
+.container-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    height: 100%;
+    padding: 20px;
+}
+
+.price {
+    display: flex;
+    gap: 10px;
+}
+
+.price>span#price_product {
+    font-size: 25px;
+    font-weight: 450;
+}
+
+.price>span#disccount,
+.iva-product>span {
+    color: rgba(30, 158, 98, 0.753);
+    font-weight: 500;
+}
+
+.characteristics>p {
+    font-size: 17px;
+}

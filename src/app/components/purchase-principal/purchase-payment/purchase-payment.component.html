@@ -1,0 +1,41 @@
+<div class="container-payment">
+    <div class="payment-info">
+        <span class="green"><i class="fas fa-regular fa-truck"></i>Envío gratis a todo el país</span>
+        <span>Conoce los tiempos y las formas de envío</span>
+    </div>
+
+    <div class="product-vendor">
+        <span *ngIf="findVendor">Vendido por {{dataVendor.nombre}}</span>
+    </div>
+
+    <div class="stock">
+        <span class="title">Stock disponible</span>
+        <div class="unitys">
+            <span>Cantidad: </span>
+            <input type="number" id="" [(ngModel)]="pieces">
+            <span id="availables">({{data.stock}}) disponibles</span>
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button class="shopp" (click)="createDataPurchase()">Comprar ahora</button>
+        <button class="cart" (click)="addToCartShop()">Agregar al carrito</button>
+    </div>
+
+    <div class="info-shopp">
+        <div class="item">
+            <i class="fas fa-solid fa-rotate-left"></i>
+            <p><span class="info-principal">Devolucion gratis.</span> Tienes 30 días desde que lo recibes.</p>
+
+        </div>
+        <div class="item">
+            <i class="fas fa-regular fa-shield"></i>
+            <p><span class="info-principal">Compra protegida.</span> Recibe el producto que esperabas o te devolvemos tu
+                dinero.</p>
+        </div>
+        <div class="item">
+            <i class="fas fa-regular fa-trophy"></i>
+            <p><span class="info-principal">ShopPoints</span> Tu compra suma puntos.</p>
+        </div>
+    </div>
+</div>

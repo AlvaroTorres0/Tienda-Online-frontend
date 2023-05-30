@@ -1,0 +1,80 @@
+.container-promotions {
+    position: relative;
+    height: 25vh;
+    width: 80%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    margin-top: 8vh;
+}
+
+.container-promotions img {
+    display: none;
+    height: 100%;
+    width: 100%;
+}
+
+.container-promotions img.image-active {
+    display: block;
+}
+
+.carousel-dot-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.dot {
+    cursor: pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    transition: opacity 0.6s ease;
+    opacity: 0.5;
+}
+
+.active,
+.dot:hover {
+    opacity: 1;
+}
+
+.btn-carousel {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    border: 0;
+    text-align: center;
+}
+
+.btn-prev {
+    left: 0;
+}
+
+.btn-next {
+    right: 0;
+}
+
+.icon-carousel {
+    font-size: 50px;
+    color: #fff;
+    opacity: .5;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.icon-carousel:hover {
+    opacity: 1;
+}

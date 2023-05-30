@@ -1,0 +1,32 @@
+<app-navbar></app-navbar>
+
+<div class="container-principal-profile">
+    <div class="profile-menu">
+        <div class="menu-options">
+            <div class="my_account option">
+                <i class="fa-solid fa-bars"></i>
+                <span>Mi cuenta</span>
+            </div>
+        
+            <div class="options_menu">
+                <div class="option accesible" (click)="showFrame('profile')">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Mi perfil</span>
+                </div>
+                <div class="option accesible" (click)="showFrame('purchases')">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span>Mis compras</span>
+                </div>
+                <div class="option accesible" (click)="showFrame('sales')">
+                    <i class="fa-solid fa-tag"></i>
+                    <span>Mis ventas</span>
+                </div>
+        
+            </div>
+        </div>
+    </div>
+    
+    <app-profile-user-profile *ngIf="statusFrames[0][0]" [dataUser]="dataUserLogged"></app-profile-user-profile>
+    <app-profile-user-purchases *ngIf="statusFrames[1][0]" [allUserPurchases] = "userPurchases"></app-profile-user-purchases>
+    <app-profile-user-sales *ngIf="statusFrames[2][0]" [userSales] = "userSales"></app-profile-user-sales>
+</div>

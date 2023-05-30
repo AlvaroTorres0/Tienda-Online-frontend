@@ -1,0 +1,102 @@
+.principal-container-userProfile{
+    width: calc(100vw - 200px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 6vh;
+}
+.container_personal{
+    width: 70%;
+}
+.title-userProfile{
+    font-size: 30px;
+    padding: 30px 0 0;
+}
+
+.form-data{
+    background: #fff;
+    padding: 25px 35px;
+    position: relative;
+}
+
+#userImage{
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    margin: 20px;
+    border-radius: 50%;
+    right: 0;
+    top: 0;
+}
+.principal-container_data{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.container-data{
+    display: flex;
+    gap: 150px;
+}
+.container-password{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.container-password i{
+    font-size: 20px;
+}
+.form-data-item{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.form-data-item input{
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid #444;
+
+}
+.form-data-item input:focus{
+    outline: none;
+}
+.form-data-item span{
+    font-size: 15px;
+    font-weight: 500;
+    opacity: .5;
+}
+.container-button{
+    display: flex;
+    align-items: center;
+}
+.button>button {
+    background: #4164e4;
+    color: #fff;
+    border: none;
+    height: 40px;
+    width: 200px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition-property: background;
+    transition-duration: .2s;
+}
+.button>button:hover {
+    background: #00b347;
+}
+
+
+
+
+.container_address{
+    width: 70%;
+}
+.container-button textarea{
+    width: 400px;
+    resize: none;
+}
+
+.container-button textarea:focus{
+    outline: none;
+}

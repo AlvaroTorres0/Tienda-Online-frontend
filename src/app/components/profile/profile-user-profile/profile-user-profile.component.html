@@ -1,0 +1,119 @@
+<div class="principal-container-userProfile">
+    <div class="container_personal">
+        <h2 class="title-userProfile">Tu información personal</h2>
+        <div class="form-data">
+            <img id="userImage" src="{{dataUser.fotografia}}" alt="">
+            <div class="principal-container_data">
+                <div class="container-data">
+                    <div class="form-data-item">
+                        <span>Nombre(s)</span>
+                        <input type="text" name="nombre" [(ngModel)]="dataUser.nombre">
+                    </div>
+        
+                    <div class="form-data-item">
+                        <span>Apellido(s)</span>
+                        <input type="text" name="apellido" [(ngModel)]="dataUser.apellido">
+                    </div>
+                </div>
+    
+                <div class="container-data">
+                    <div class="form-data-item">
+                        <span>Email</span>
+                        <input type="email" name="email" [(ngModel)]="dataUser.email">
+                    </div>
+        
+                    <div class="form-data-item">
+                        <div class="form-data-item">
+                            <span>Teléfono</span>
+                            <input type="tel" name="telefono" [(ngModel)]="dataUser.telefono">
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="container-data container-button">        
+                    <div class="button">
+                        <button (click)="updateUser()">Guardar cambios</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container_address">
+        <h2 class="title-userProfile">Tu domicilio</h2>
+        <div class="form-data">
+            <img id="userImage" src="../../../../assets/animated-icons/tierra.gif" alt="">
+            <div class="principal-container_data">
+                <div class="container-data">
+                    <div class="form-data-item">
+                        <span>Código postal</span>
+                        <input type="text" name="cp" [(ngModel)]="dataUser.codigopostal">
+                    </div>
+        
+                    <div class="form-data-item">
+                        <span>Estado</span>
+                        <input type="text" name="estado" [(ngModel)]="dataUser.estado">
+                    </div>
+                </div>
+    
+                <div class="container-data">
+                    <div class="form-data-item">
+                        <span>Municipio/alcaldía</span>
+                        <input type="text" name="municipio" [(ngModel)]="dataUser.municipio">
+                    </div>
+        
+                    <div class="form-data-item">
+                        <span>Colonia</span>
+                        <input type="text" name="colonia" [(ngModel)]="dataUser.colonia">
+                    </div>
+                </div>
+
+                <div class="container-data">
+                    <div class="form-data-item">
+                        <span>Calle principal</span>
+                        <input type="text" name="callePrincipal" [(ngModel)]="dataUser.calleprincipal">
+                    </div>
+        
+                    <div class="form-data-item">
+                        <span>Numéro exterior</span>
+                        <input type="number" name="numExt" [(ngModel)]="dataUser.numeroexterior">
+                    </div>
+                </div>
+
+                <div class="container-data">
+                    <div class="form-data-item">
+                        <span>Numéro interior/departamento</span>
+                        <input type="number" name="numInt" [(ngModel)]="dataUser.numeroexterior">
+                    </div>
+
+                    <div class="form-data-item">
+                        <span>Entre calle 1</span>
+                        <input type="text" name="calle1" [(ngModel)]="dataUser.calle1">
+                    </div>
+        
+                    
+                </div>
+    
+                <div class="container-data container-button">
+                    <div class="form-data-item">
+                        <span>Entre calle 2</span>
+                        <input type="text" name="calle2" [(ngModel)]="dataUser.calle2">
+                    </div>
+
+                    <div class="form-data-item">
+                        <span>Señas particulares</span>
+                        <textarea cols="30" rows="3" [(ngModel)]="dataUser.descripcion" name="description"></textarea>
+                    </div>
+                </div>
+                <div class="container-data container-button">
+                    <div class="button">
+                        <button (click)="updateUser()">Guardar cambios</button>
+                    </div>
+                </div>
+                
+
+            </div>        
+    </div>
+
+</div>

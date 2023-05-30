@@ -1,0 +1,31 @@
+.container-purchase {
+    height: calc(100vh);
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-purchase-components {
+    width: 80%;
+    height: 70%;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+}
+
+.purchase {
+    height: 100%;
+}
+
+.images {
+    width: 40%;
+}
+
+.data {
+    width: 33%;
+}
+
+.payment {
+    width: 27%;
+}

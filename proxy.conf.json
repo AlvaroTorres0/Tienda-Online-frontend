@@ -1,0 +1,8 @@
+
+{
+    "/dipomex/*":{
+        "target":"https://api.tau.com.mx",
+        "secure":false,
+        "ChangeOrigin":true
+    }
+}

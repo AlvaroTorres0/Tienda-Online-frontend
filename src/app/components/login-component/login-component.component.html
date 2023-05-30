@@ -1,0 +1,47 @@
+<div class="principal-container">
+    <div class="container-data-login">
+        <img src="../../../assets/logo.png" alt="logo de la tienda">
+        <form>
+            <div class="login-item email">
+                <span>Email</span>
+                <input type="text" name="email" id="email" [(ngModel)]="credentials.email">
+            </div>
+
+            <div class="login-item password">
+                <span>Contraseña</span>
+                <input type="password" name="password" id="password" [(ngModel)]="credentials.password">
+            </div>
+
+            <div class="login-item button-login">
+                <button (click)="validateCredentials()">Iniciar Sesión</button>
+            </div>
+        </form>
+
+        <div class="options">
+            <div class="remember-me">
+                <input type="checkbox" id="">
+                <span>Recuérdame</span>
+            </div>
+
+            <div class="forgot-password">
+                <strong>Olvidé mi contraseña</strong>
+            </div>
+        </div>
+
+        <div class="create-accout">
+            <span>¿Aún no tienes cuenta? <a href="/new-user">Crea una aquí</a></span>
+        </div>
+    </div>
+
+    <div class="container-login-aside">
+        <div class="aside_content">
+            <div class="img">
+                <img src="../../../assets/compras.png" alt="Compras">
+            </div>
+            <div class="aside_phrases">
+                <strong class="phrases">Lo que necesites, cuando lo necesites</strong>
+                <span class="phrases">A un clic de distancia</span>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,105 @@
+<app-navbar></app-navbar>
+
+<div class="container-principal-sale" *ngIf="productFrame">
+    <div class="container-sale">
+        <div class="icon">
+            <img src="../../../assets/animated-icons/compras.gif" alt="">
+        </div>
+        <h2>Cuéntanos sobre tu producto</h2>
+        <form class="sale-info">
+            <div class="column-info">
+                <div class="itemform">
+                    <span>Nombre (como se mostrará al mundo)</span>
+                    <input type="text" name="product-name" [(ngModel)]="dataProduct.nombre">
+                </div>
+
+                <div class="itemform">
+                    <span>Categoría</span>
+                    <select name="categoria" [(ngModel)]="dataProduct.categoria">
+                        <option value="default">Categoría de tu producto</option>
+                        <option value="Autos, motocicletas y otros">Autos, motocicletas y otros</option>
+                        <option value="Accesorios para vehículos">Accesorios para vehículos</option>
+                        <option value="Deportes y fitness">Deportes y fitness</option>
+                        <option value="Computación">Computación</option>
+                        <option value="Consolas y videojuegos">Consolas y videojuegos</option>
+                        <option value="Ropa, bolsas y calzado">Ropa, bolsas y calzado</option>
+                        <option value="Celulares y telefonía">Celulares y telefonía</option>
+                        <option value="Electrónica, audio y video">Electrónica, audio y video</option>
+                        <option value="Hogar, muebles y jardin">Hogar, muebles y jardin</option>
+                        <option value="Belleza y cuidado personal">Belleza y cuidado personal</option>
+                        <option value="Cámaras y accesorios">Cámaras y accesorios</option>
+                        <option value="Libros, revistas y cómics">Libros, revistas y cómics</option>
+                        <option value="Joyas y relojes">Joyas y relojes</option>
+                        <option value="Instrumentos musicales">Instrumentos musicales</option>
+                    </select>
+                </div>
+
+                <div class="itemform">
+                    <span>Precio</span>
+                    <input type="Number" name="price" [(ngModel)]="dataProduct.precio"
+                        (keypress)="PriceValidation($event)">
+                </div>
+
+                <div class="itemform">
+                    <span>Unidades disponibles</span>
+                    <input type="number" name="stock" [(ngModel)]="dataProduct.stock"
+                        (keypress)="NumberValidation($event)">
+                </div>
+            </div>
+
+
+            <div class="column-info">
+                <div class="itemform">
+                    <span>Marca</span>
+                    <input type="text" name="brand" [(ngModel)]="dataProduct.marca">
+                </div>
+
+                <div class="itemform">
+                    <span>Descripción del producto</span>
+                    <textarea cols="30" rows="10" name="description" [(ngModel)]="dataProduct.descripcion"></textarea>
+                </div>
+
+                <div class="itemform">
+                    <button (click)="saleContinue()">Continuar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<!--? FRAME IMAGES -->
+<div class="container-sale-images" *ngIf="imagesFrame">
+    <div class="container-images">
+        <div class="icon">
+            <img src="../../../assets/animated-icons/camara-trasera.gif" alt="">
+        </div>
+        <h2>Muestra al mundo tu producto</h2>
+
+        <div class="section selection">
+            <ngx-file-drop dropZoneLabel="Drop files here" class="dragdrop" (onFileDrop)="uploadDragAndDrop($event)">
+                <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector"
+                    class="dragdrop-container">
+                    <span id="messagge">Arrastra aquí las imágenes de tu producto</span>
+                    <div class="button">
+                        <button id="inspect" type="button" (click)="openFileSelector()">Examinar</button>
+                    </div>
+                </ng-template>
+            </ngx-file-drop>
+        </div>
+
+        <div *ngIf="loader" id="contenedor">
+            <div class="loader" id="loader">Loading...</div>
+        </div>
+
+        <div *ngIf="showImages" class="section images">
+            <img *ngFor="let item of images" src="{{item.img}}" alt="">
+        </div>
+
+        <div class="section button-upload">
+            <button (click)="postNewSale()">Publicar producto</button>
+        </div>
+    </div>
+
+
+</div>

@@ -1,0 +1,137 @@
+<!--? Formulario Usuario -->
+<div class="container-principal">
+    <div class="container-data-user" *ngIf="formUser">
+        <div class="icon">
+            <img src="../../../assets/animated-icons/usuario.gif" alt="" *ngIf="gif">
+            <img src="{{dataUser.fotografia}}" *ngIf="userImage" id="userImage" alt="">
+        </div>
+        <h2 class="title-newuser">Ingresa tus datos</h2>
+        <form class="form-data" [formGroup]="dataUserForm" (ngSubmit)="onSubmit(dataUserForm)">
+            <div class="form-data-item">
+
+                <span>Email *</span>
+                <input type="email" name="email" formControlName="email">
+            </div>
+
+            <div class="form-data-item">
+                <span>Nombre(s) *</span>
+                <input type="text" name="nombre" formControlName="nombre"
+                    (input)="lyricsValidation($event, dataUserForm,'nombre')" required>
+            </div>
+
+            <div class=" form-data-item">
+                <span>Apellido(s) *</span>
+                <input type="text" name="apellido" formControlName="apellido"
+                    (input)="lyricsValidation($event, dataUserForm,'apellido')" required>
+            </div>
+
+            <div class=" form-data-item">
+                <span>Teléfono *</span>
+                <input type="tel" name="telefono" formControlName="telefono"
+                    (input)="numberValidation($event, dataUserForm, 'telefono')" required>
+            </div>
+
+            <div class="form-data-item">
+                <span>Contraseña *</span>
+                <input type="password" name="password" formControlName="contrasenia">
+            </div>
+            <ngx-file-drop dropZoneLabel="Drop files here" class="dragdrop" (onFileDrop)="uploadDragAndDrop($event)">
+                <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector"
+                    class="dragdrop-container">
+                    <span id="messagge">Arrastra una imagen para tu foto de perfil</span>
+                </ng-template>
+            </ngx-file-drop>
+
+            <div class="button">
+                <button type="submit">Continuar</button>
+            </div>
+        </form>
+
+    </div>
+
+
+    <!--? Formulario Domicilio -->
+    <form class="container-address-user" *ngIf="formAddress" [formGroup]="addressUserForm"
+        (ngSubmit)="onSubmit(addressUserForm)">
+        <div class="icon">
+            <img src="../../../assets/animated-icons/localizacion.gif" alt="">
+        </div>
+        <h2 class="title-newuser">Agrega un domicilio</h2>
+        <div class="form-data-address">
+            <div class="form-data-item_address">
+                <span class="span">Código postal *</span>
+                <input type="text" name="cp" formControlName="codigopostal"
+                    (input)="numberValidation($event, addressUserForm, 'codigopostal')" (keyup.enter)="onEnter()"
+                    (blur)="onBlur()" required="">
+            </div>
+
+            <div class="form-data-item_address--double">
+                <div class="data-item">
+                    <span class="span">Estado *</span>
+                    <input type="text" name="estado" formControlName="estado"
+                        (input)="lyricsValidation($event, addressUserForm,'estado')" required>
+                </div>
+
+                <div class="data-item">
+                    <span class="span">Municipio/Alcaldía *</span>
+                    <input type="text" name="municipio" formControlName="municipio"
+                        (input)="lyricsValidation($event, addressUserForm,'municipio')" required>
+                </div>
+            </div>
+
+            <div class="form-data-item_address">
+                <span class="span">Colonia *</span>
+                <select name="" id="" formControlName="colonia">
+                    <option *ngFor="let colonia of dataAddress[0]?.colonias" [value]="colonia">{{ colonia }}</option>
+                </select>
+            </div>
+
+            <div class="form-data-item_address--double">
+                <div class="data-item">
+                    <span class="span">Calle *</span>
+                    <input type="text" name="calle" formControlName="calleprincipal">
+                </div>
+
+                <div class="data-item">
+                    <span class="span">Número exterior *</span>
+                    <input type="number" name="num-ex" formControlName="numeroexterior"
+                        (input)="numberValidation($event, addressUserForm, 'numeroexterior')" required>
+                </div>
+            </div>
+
+            <div class="form-data-item_address">
+                <span class="span">Número interior/Depto (opcional)</span>
+                <input type="number" name="num-int" formControlName="numerointerior"
+                    (input)="numberValidation($event, addressUserForm, 'numerointerior')">
+            </div>
+
+            <div class="form-data-item_address--double street">
+                <div class="item-message">
+                    <span class="span message">¿Entre qué calles está? (opcional)</span>
+                </div>
+                <div class="items-street">
+                    <div class="data-item">
+                        <span class="span">Entre calle 1</span>
+                        <input type="text" name="calle1" formControlName="calle1">
+                    </div>
+
+                    <div class="data-item">
+                        <span class="span">Entre calle 2</span>
+                        <input type="text" name="calle2" formControlName="calle2">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-data-item_address">
+                <span class="span">Señas particulares</span>
+                <textarea cols="30" rows="3" name="description" formControlName="descripcion"></textarea>
+            </div>
+
+            <div class="button-address button">
+                <button>Registrar</button>
+            </div>
+        </div>
+    </form>
+
+
+</div>

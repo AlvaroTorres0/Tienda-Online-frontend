@@ -1,0 +1,71 @@
+<app-navbar></app-navbar>
+
+<div class="container-principal_cart-shop" *ngIf="frameCartShop">
+    <h2 class="title">Tu carrito de compras</h2>
+    <div class="container-cart_info-pay">
+        <div class="container-cart">
+            <div class="card-product" *ngFor="let product of products; let i = index">
+                <div class="card-product_vendor">
+                    <span>Vendido por {{namesVendors[i]}}</span>
+                </div>
+
+                <div class="card-product_data">
+                    <div class="card-product_data-img">
+                        <img src="{{product.imagenes[0].img}}" alt="">
+                    </div>
+    
+                    <div class="card-product_data-info">
+                        <div class="data-info">
+                            <div class="data-info_name">
+                                <span>{{product.nombre}}</span>
+                            </div>
+
+                            <div class="data-info_options">
+                                <span (click)="deleteProduct(i)">Eliminar</span>
+                            </div>
+
+                        </div>
+                        <div class="pieces">
+                            <div class="container-pieces">
+                                <div class="value-button" id="decrease" (click)="decreaseValue(i)" value="Decrease Value">-</div>
+                                <input type="number" [id]="i" value="{{cartShop[i].pieces}}"/>
+                                <div class="value-button" id="increase" (click)="increaseValue(i)" value="Increase Value">+</div>
+                            </div>
+                            <span id="availables">{{product.stock}} disponibles</span>
+                        </div>
+                    </div>
+    
+                    <div class="card-product_data-pay">
+                        <span>$ {{cartShop[i].pieces * product.precio}}</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+        <div class="container-pay">
+            <div class="pay">
+                <div class="container-pay_title">
+                    <span>Resumen de la compra</span>
+                </div>
+    
+                <div class="info-payment">
+                    <div class="payment_products">
+                        <span>Productos</span>
+                        <span>{{productsOnCart}}</span>
+                    </div>
+    
+                    <div class="payment_products total">
+                        <span>Total</span>
+                        <span>$ {{total}}</span>
+                    </div>
+                </div>
+
+                <div class="pay_button">
+                    <button (click)="createDataPurchase()">Continuar compra</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
